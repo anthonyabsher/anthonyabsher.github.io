@@ -4,7 +4,7 @@
 
 body {
 	background: url('/images/symphony.png');
-	color: white;
+	color: #333;
 	text-shadow: 0 0 2px black;
     font-size: 24pt;
     font-family: sans-serif;
