@@ -1,4 +1,15 @@
 body {
 	background: url('/images/flowers.jpg');
+	color: #333;
+    font-size: 24pt;
+    font-family: sans-serif;
+    padding: 10em 0;
 
+}
+
+section {
+  min-height: 800px;
+  width: 80%;
+  padding: .5em;
+  margin: auto;
 }
