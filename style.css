@@ -1,6 +1,10 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
 	background: url('/images/flowers.jpg');
-	color: #333;
+	color: white;
     font-size: 24pt;
     font-family: sans-serif;
     padding: 10em 0;
@@ -12,4 +16,9 @@ section {
   width: 80%;
   padding: .5em;
   margin: auto;
+}
+
+h1, h2, h3{
+	text-align: center;
+
 }
