@@ -18,13 +18,8 @@ section {
   margin: auto;
 }
 
-h1, h2, h3{
+.content {
 	text-align: center;
-
-}
-
-h1{
-	font-size: 6em;
 }
 
 img{
