@@ -20,6 +20,14 @@ body {
 
 }
 
+h1{
+	font-size: 2em;
+}
+
+.content {
+	text-align: center;
+}
+
 .content section {
   min-height: 800px;
   width: 80%;
@@ -28,9 +36,6 @@ body {
   text-shadow: 0 0 2px white;
 }
 
-.content {
-	text-align: center;
-}
 
 .btn {
 	overflow: hidden;
@@ -53,7 +58,7 @@ body {
 
 .btn:hover,
 .btn:active {
-	color: #0e83cd;
+	color: blue;
 }
 
 .btn:hover:after {

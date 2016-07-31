@@ -35,7 +35,6 @@
 	text-transform: uppercase;
 	color: #333;
 	letter-spacing: 4px;
-	font-size: 2em;
 	margin: 0;
 	float: left;
 }
@@ -52,9 +51,9 @@
 	text-decoration: none;
 }
 
-.cbp-af-header nav a:hover {
+/*.cbp-af-header nav a:hover {
 	color: #333;
-}
+}*/
 
 /* Transitions and class for reduced height */
 .cbp-af-header h1,
