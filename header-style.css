@@ -5,7 +5,7 @@
 	width: 100%;
 	background: #f6f6f6;
 	z-index: 10000;
-	height: 230px;
+	height: 200px;
 	overflow: hidden;
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
@@ -35,7 +35,7 @@
 	text-transform: uppercase;
 	color: #333;
 	letter-spacing: 4px;
-	font-size: 4em;
+	font-size: 6em;
 	margin: 0;
 	float: left;
 }
@@ -49,6 +49,7 @@
 	font-weight: 700;
 	margin: 0 0 0 20px;
 	font-size: 1.4em;
+	text-decoration: none;
 }
 
 .cbp-af-header nav a:hover {
@@ -98,6 +99,7 @@
 
 	.cbp-af-header nav a {
 		margin: 0 10px;
+		border: 1px black;
 	}
 
 	.cbp-af-header.cbp-af-header-shrink h1,
