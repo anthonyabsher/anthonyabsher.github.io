@@ -4,7 +4,7 @@
 
 body {
 	background: url('/images/symphony.png');
-	color: lightgray;
+	color: black;
     font-size: 24pt;
     font-family: sans-serif;
     padding: 10em 0;
@@ -14,8 +14,9 @@ body {
 .content section {
   min-height: 800px;
   width: 80%;
-  padding: .5em;
+  padding: .3em;
   margin: auto;
+  text-shadow: 0 0 2px white;
 }
 
 .content {
