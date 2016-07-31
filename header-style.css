@@ -35,7 +35,7 @@
 	text-transform: uppercase;
 	color: #333;
 	letter-spacing: 4px;
-	/*font-size: 4em;*/
+	font-size: 4em;
 	margin: 0;
 	float: left;
 }
@@ -46,9 +46,9 @@
 
 .cbp-af-header nav a {
 	color: #aaa;
-	/*font-weight: 700;*/
+	font-weight: 700;
 	margin: 0 0 0 20px;
-	/*font-size: 1.4em;*/
+	font-size: 1.4em;
 }
 
 .cbp-af-header nav a:hover {
@@ -73,7 +73,7 @@
 }
 
 .cbp-af-header.cbp-af-header-shrink h1 {
-	/*font-size: 2em;*/
+	font-size: 2em;
 }
 
 /* Example Media Queries */

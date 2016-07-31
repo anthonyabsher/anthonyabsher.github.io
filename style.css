@@ -6,7 +6,7 @@ body {
 	background: url('/images/symphony.png');
 	color: lightgray;
 	text-shadow: 0 0 3px black;
-    font-size: 12pt;
+    font-size: 24pt;
     font-family: sans-serif;
     padding: 10em 0;
 
@@ -19,6 +19,8 @@ section {
   margin: auto;
 }
 
+h1, h2, h3{
+	text-align: center;
 
 }
 
