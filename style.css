@@ -58,7 +58,7 @@ h1{
 
 .btn:hover,
 .btn:active {
-	color: blue;
+	color: black;
 }
 
 .btn:hover:after {
