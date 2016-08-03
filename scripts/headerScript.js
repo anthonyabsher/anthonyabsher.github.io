@@ -1,7 +1,7 @@
 var cbpAnimatedHeader = (function() {
 
 	var docElem = document.documentElement,
-		header = document.querySelector( '.cbp-af-header' ),
+		header = document.querySelector( '.header' ),
 		didScroll = false,
 		changeHeaderOn = 300;
 
@@ -17,10 +17,10 @@ var cbpAnimatedHeader = (function() {
 	function scrollPage() {
 		var sy = scrollY();
 		if ( sy >= changeHeaderOn ) {
-			classie.add( header, 'cbp-af-header-shrink' );
+			classie.add( header, 'header-shrink' );
 		}
 		else {
-			classie.remove( header, 'cbp-af-header-shrink' );
+			classie.remove( header, 'header-shrink' );
 		}
 		didScroll = false;
 	}
