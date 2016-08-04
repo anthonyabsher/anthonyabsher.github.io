@@ -49,8 +49,8 @@ h1{
 	border: none;
 	font-size: .7em;
 	color: #333;
-	padding: 25px 80px;
-	background: none;
+	padding: 10px 20px;
+	background: transparent;
 	cursor: pointer;
 	text-transform: uppercase;
 	letter-spacing: 1px;
@@ -68,6 +68,7 @@ h1{
 	top: 50%;
 	left: 50%;
 	opacity: 0;
+	background: lightblue;
 	-webkit-transform: translateX(-50%) translateY(-50%);
 	-moz-transform: translateX(-50%) translateY(-50%);
 	-ms-transform: translateX(-50%) translateY(-50%);
@@ -77,6 +78,7 @@ h1{
 .btn:hover,
 .btn:active {
 	color: black;
+
 }
 
 .btn:hover:after {
