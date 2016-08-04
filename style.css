@@ -47,8 +47,9 @@ h1{
 	font-size: 1em;
 	background: transparent;*/
 	border: none;
-	font-size: inherit;
-	color: inherit;
+	font-size: .7em;
+	color: #333;
+	padding: 25px 80px;
 	background: none;
 	cursor: pointer;
 	text-transform: uppercase;
