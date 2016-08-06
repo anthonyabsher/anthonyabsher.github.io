@@ -10,7 +10,7 @@
 	-webkit-transition: height 0.3s;
 	-moz-transition: height 0.3s;
 	transition: height 0.3s;
-	border-bottom: 1px solid black;
+	border-bottom: 1px solid darkgray;
 }
 
 .header .inner {
