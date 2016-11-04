@@ -38,11 +38,120 @@
 				Here are my current projects!!
 			</h1>
 		</section>
+		
+		<canvas id="canvasName" width="500px" height="500px">
+		</canvas>
 	</div>
-
-
-
 </div>
+
+
+
+<script type="application/processing" target="canvasName">
+		float xPos, yPos, cxPos, cyPos, score;
+		float speedinc = .001;
+		int tailSize = 0;
+		int tailX[] = new int[100], tailY[] = new int[100];
+
+
+		char currentStatus;
+
+
+		void setup(){
+		  size(400, 400);
+		  noStroke();
+		  smooth();
+		  rectMode(CENTER);
+		  
+		  xPos = width/2;
+		  yPos = height/2;
+		  cxPos = round(random(20, width - 20));
+		  cyPos = round(random(20, height - 20));
+
+		}
+
+		void draw(){
+		  
+		  fill(255);
+		  rect(width/2, height/2, width, height);
+		  fill(0);
+		  rect(xPos, yPos, 10, 10);
+		  ellipse(cxPos, cyPos, 10, 10);
+		  text("Score: "+ score, 0, 400);
+		  
+		  move();
+		  checkBounds();
+		  checkCollision();
+		  
+		  speedinc += .001;
+		}
+
+		void keyPressed(){
+		  
+		  if(keyCode == UP){
+			currentStatus = 'u';
+		  }else if(keyCode == DOWN){
+			currentStatus = 'd';
+		  }else if( keyCode == LEFT){
+			currentStatus = 'l';
+		  }else if( keyCode ==  RIGHT ){
+			currentStatus = 'r';
+		  }
+		  
+		}
+
+		void move(){
+		  
+		  int xPrev = tailX[0], yPrev = tailY[0];
+		  int tempX, tempY;
+		  
+		  for(int i = 0; i < tailSize; i++){
+			tempX = tailX[i];
+			tempY = tailY[i];
+			tailX[i] = xPrev;
+			tailY[i] = yPrev;
+			xPrev = tempX;
+			yPrev = tempY;
+		  }
+		  
+		 switch(currentStatus){
+		   case 'u':
+			 yPos-= 1 + speedinc;
+			 break;
+		   case 'd':
+			 yPos+= 1 + speedinc;
+			 break;
+		   case 'l':
+			 xPos-= 1 + speedinc;
+			 break;
+		   case 'r':
+			 xPos+= 1 + speedinc;
+			 break;     
+		 }
+		 
+		}
+
+		void checkBounds(){
+		  if (xPos - 5 < 0 || xPos + 5 > width || yPos - 5 < 0 || yPos + 5 > height){
+			text("GAME OVER", (width/2) - 35, height/2);
+			noLoop();
+		  }
+		}
+
+		void checkCollision(){
+		  if( abs(xPos - cxPos) < 6 && abs(yPos - cyPos) < 6 ){
+			score += 100;
+			cxPos = round(random(20, width - 20));
+			cyPos = round(random(20, height - 20)); 
+			tailSize++;
+		  }
+		}
+
+
+</script>
+
+
+
+
 
 
 <!-- SCRIPTS -->
