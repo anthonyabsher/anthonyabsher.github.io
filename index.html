@@ -1,52 +1,158 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+    <style>
+        @font-face { font-family: Rovery; src: url('./css/VintageRovery.otf'); }
+        @font-face { font-family: VintageStyle; src: url('./css/VintageStyle.otf'); }
+        @keyframes rotation {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(359deg);
+            }
+        }
+        @keyframes bounce {
+            0%, 100%, 20%, 50%, 80% {
+                -webkit-transform: translateY(0);
+                -ms-transform:     translateY(0);
+                transform:         translateY(0)
+            }
+            40% {
+                -webkit-transform: translateY(-30px);
+                -ms-transform:     translateY(-30px);
+                transform:         translateY(-30px)
+            }
+            60% {
+                -webkit-transform: translateY(-15px);
+                -ms-transform:     translateY(-15px);
+                transform:         translateY(-15px)
+            }
+        }
 
+        @keyframes fadeInAnimation {
+            0% {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        i {
+            -webkit-animation-duration: 1s;
+            animation-duration: 1s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+            animation-iteration-count: infinite;
+            -webkit-animation-iteration-count: infinite;
+        }
+
+        i:hover {
+            cursor: pointer;
+            animation-name: bounce;
+            -moz-animation-name: bounce;
+        }
+
+        #introContent {
+            animation: fadeInAnimation ease 3s;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
-    <meta charset="utf8">
-    <meta charset="UTF-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Absher</title>
+    <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by freepik - www.freepik.com</a> -->
+</head>
+<body style="margin: 0px; padding: 0px; overflow: hidden;">
+    <div id="intro" style="background-image: url('./images/pikist.jpg'); height: 100vh; width: 100vw; font-family: Rovery;">
+        <img style="animation: rotation 2s infinite linear; position: absolute; top: -40vh; left: -25vw; width: 60vw;" src="./images/SeekPng.com_vinyl-records-png_492575.png">
+        <div id="header" style="position: absolute; top: 0; left: 50vw; width: 50vw;  display: flex; flex-direction: row; font-family: Rovery; color: antiquewhite; z-index: 1;">
+            <div onclick="scrollIntoZone('about')" style="cursor: pointer; margin: 0px 1.5vw;"><h1>About</h1></div>
+            <span style="font-size: xx-large; color: goldenrod; padding-top: 20px;">✦</span>
+            <div onclick="scrollIntoZone('projects')" style="cursor: pointer; margin: 0px 1.5vw;"><h1>Projects</h1></div>
+            <span style="font-size: xx-large; color: goldenrod;padding-top: 20px;">✦</span>
+            <div onclick="scrollIntoZone('projects')" style="cursor: pointer; margin: 0px 1.5vw;"><h1>Resume</h1></div>
+            <span style="font-size: xx-large; color: goldenrod;padding-top: 20px;">✦</span>
+            <div onclick="scrollIntoZone('projects')" style="cursor: pointer; margin: 0px 1.5vw;"><h1>Contact</h1></div>
+        </div>
+        <div id="introContent" style="text-align: center; padding-top: 35vh;">
+            <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; ">Anthony Absher</h1>
+            <h2 style="font-family: VintageStyle; font-weight: normal; font-size: 4em; margin: 0px; color: goldenrod; ">Creative <span style="font-size: xx-large; color: antiquewhite;">✦</span> Driven <span style="font-size: xx-large; color: antiquewhite;">✦</span> Unique </h2>
+        </div>
+        <img style="position: absolute; left: 0; top: 90vh;" src="./images/cream-wave.svg">
+        <i class="fa fa-angle-down" onclick="scrollIntoZone('about')" style="position: absolute; top: 80vh; color: goldenrod; font-size: 8em; left: 48vw;"></i>
+    </div>
 
-    <link rel="stylesheet" href="css/header-style.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-  </head>
+    <div id="about" style="background-image: url('./images/5477582.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
+        <img style="position: absolute; left: 0; top: 100vh; transform: rotate(180deg);" src="./images/cream-wave.svg">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('intro')" style="position: absolute; top: 100vh; color: #c48cc4; font-size: 8em; left: 48vw; z-index: 1;"></i>
+        <div style="text-align: left; color:darkslategray; padding: 10vh 10vw;">
+            <h1 style="font-size: 4em; margin: 0px; color: darkslategray;">About Me</h1>
+            <!-- <img src="./images/me.jpg"/> -->
+            <!-- <p>🎰 Born and raised in Las Vegas</p>
+            <p>📚 Moved to Seattle to study Computer Science and begin my professional career </p>
+            <p>🎸 I enjoy spending my free time cooking, playing music, learning, or travelling  </p>
+            <p>🎸 I enjoy spending my free time cooking, playing music, learning, or travelling  </p> -->
+            <div style="flex-direction: row; display: flex; margin-top: 10vh;">
+                <div style="text-align: center; margin: 0px 20px; width: 20vw;">
+                    <h1 style="font-size: 90px;">🎰</h1>
+                    <h3>Born and raised in Las Vegas</h3>
+                </div>
+                <div style="text-align: center; width: 20vw;">
+                    <h1 style="font-size: 90px;">📚</h1>
+                    <h3>Moved to Seattle to study Computer Science and start my professional career</h3>
+                </div>
+                <div style="text-align: center; width: 20vw;">
+                    <h1 style="font-size: 90px;">🎸</h1>
+                    <h3>For fun, I enjoy playing music, travelling, cooking, and learning new things </h3>
+                </div>
+                <div style="text-align: center; width: 20vw;">
+                    <h1 style="font-size: 90px;">💻</h1>
+                    <h3> Now I look for ways that I can use technology to better the lives of myself and others </h3>
+                </div>
+            </div>
+        </div>
+        <img style="position: absolute; left: 0; top: 190vh;" src="./images/purple-wave.svg">
+        <i class="fa fa-angle-down" onclick="scrollIntoZone('projects')" style="position: absolute; top: 185vh; color: #c48cc4; font-size: 8em; left: 48vw;"></i>
+    </div>
 
-<body>
-	<div class = "container">
 
-		<div class="header">
+    <div id="projects" style="background-image: url('./images/5488082.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
+        <img style="position: absolute; left: 0; top: 200vh; transform: rotate(180deg);" src="./images/purple-wave.svg">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('about')" style="position: absolute; top: 200vh; color: goldenrod; font-size: 8em; left: 48vw; z-index: 1;"></i>
+        <div style="text-align: center; padding-top: 15vh; color:darkslategray;">
+            <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; transform: translate(-25vw, -5vh); font-weight: normal;">My Projects</h1>
+            <h2 style="font-family: VintageStyle; color: antiquewhite; font-size: 4em; font-weight: normal; transform: translate(-30vw, -70px); margin-bottom: 0px;">Troves (2020) </h2>
+            <img style="width: 18vw; float: left; margin-right: 5vw; margin-left: 10vw;" src="images/troves1.png"/>
+            <img style="width: 18vw; float: left;" src="images/troves2.png">
+            <p style="color: antiquewhite; font-size: 1.5em; padding: 10px;"> This was a location-based mobile app built with an idea to drive people to get out and explore community designated points of interest. Built on a react-native stack, the app was designed to work cross-platform.  </p>
+            <i class="fa fa-angle-down" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 290vh; color: goldenrod; font-size: 8em; left: 48vw;"></i>
+        </div>
+    </div>
 
-			<div class="inner">
-
-				<h1>Anthony Absher</h1>
-				<nav>
-					<a href="index.html"><button class="btn">Home</button></a>
-					<a href="about.html"><button class="btn">About Me</button></a>
-					<a href="projects.html"><button class="btn">Projects</button></a>
-					<a href="contact.html"><button class="btn">Contact Me</button></a>
-				</nav>
-
-			</div>
-
-		</div>
-
-		<div class = "content>
-		
-			<section>
-				
-			</section>
-			<section>
-				<h1> Student. Creator. Thinker. </h1>
-			</section>
-
-
-		</div>
-	</div>
+    <div id="projects2" style="background-image: url('./images/5488082.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
+        <img style="position: absolute; left: 0; top: 300vh; transform: rotate(180deg);" src="./images/blue-wave.svg">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects')" style="position: absolute; top: 300vh; color: goldenrod; font-size: 8em; left: 48vw; z-index: 1;"></i>
+        <div style="text-align: center; padding-top: 15vh; color:darkslategray;">
+            <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; transform: translate(-20vw, -5vh); font-weight: normal;">My Projects (Continued)</h1>
+            <h2 style="font-family: VintageStyle; color: antiquewhite; font-size: 4em; font-weight: normal; transform: translate(-27vw, -70px); margin-bottom: 0px;">Sound Off (2021) </h2>
+            <img style="width: 18vw; float: left; margin-right: 5vw; margin-left: 10vw;" src="images/troves1.png"/>
+            <img style="width: 18vw; float: left;" src="images/troves2.png">
+            <p style="color: antiquewhite; font-size: 1.5em; padding: 10px;"> This was a location-based mobile app built with an idea to drive people to get out and explore community designated points of interest. Built on a react-native stack, the app was designed to work cross-platform.  </p>
+        </div>
+    </div>
 </body>
 
-<!-- SCRIPTS -->
-<script src="scripts/headerScript.js"> </script>
-<script src="scripts/classie.js"> </script>
-
+<script>
+    function scrollIntoZone(zone) {
+        var element = document.getElementById(zone);
+        element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+    }
+</script>
 </html>

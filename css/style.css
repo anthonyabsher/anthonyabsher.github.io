@@ -17,12 +17,57 @@ html {
 body {
 	background: url('/images/symphony.png');
     font-size: 20pt;
-    padding: 10em 0;
-
+    padding: 75px 0;
+	margin: 0px;
 }
 
 h1{
 	font-size: 2em;
+}
+
+.main-banner {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.7)), url("../images/waves3.jpg");
+	/* Set a specific height */
+	/* height: 50%; */
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	padding-top: 0px;
+}
+
+.projects-banner {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.8)), url("../images/wave.png");
+	/* Set a specific height */
+	height: 50%;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.contact-banner {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7)), url("../images/curls2.jpg");
+	/* Set a specific height */
+	height: 50%;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+}
+
+.about-banner {
+	background-image: linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.95)), url("../images/waves2.jpg");
+	/* Set a specific height */
+	height: 50%;
+	/* Position and center the image to scale nicely on all screens */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
 }
 
 .container {
@@ -33,13 +78,27 @@ h1{
 .content {
 	text-align: center;
 	color: black;
+	height: 100vh;
+	overflow-y: scroll;
+	scroll-snap-type: y mandatory;
 }
 
+/* section {
+	opacity: 0;
+  }
+  
+  section.is-visible {
+	opacity: 1;
+	transition: opacity 1000ms;
+  } */
+
 .content section {
-  min-height: 800px;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   padding: .3em;
   margin: 0 auto;
+  padding-top: 50px;
+  scroll-snap-align: center;
 }
 
 
@@ -50,7 +109,7 @@ h1{
 	background: transparent;*/
 	border: none;
 	font-size: .7em;
-	color: #333;
+	color: whitesmoke;
 	padding: 5px 15px;
 	background: transparent;
 	cursor: pointer;

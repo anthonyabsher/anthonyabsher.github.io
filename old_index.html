@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf8">
+    <meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+
+    <link rel="stylesheet" href="css/header-style.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+  </head>
+
+<body>
+	<div class = "container">
+		<div class="header">
+			<div class="inner">
+				<h1>Anthony Absher</h1>
+				<nav>
+					<a href="#home"><button class="btn">Home</button></a>
+					<a href="#about"><button class="btn">About Me</button></a>
+					<a href="#projects"><button class="btn">Projects</button></a>
+					<a href="#contact"><button class="btn">Contact Me</button></a>
+				</nav>
+			</div>
+		</div>
+
+		<div class = "content">
+			<section class="main-banner" id="home">
+				<h1> Driven, Inspired, and Motivated to Make a Difference</h1>
+			</section>
+			<section class="about-banner" id="about">
+				<h1> My Story </h1>
+				<div style="display: flex;">
+					<img style="width: 250px; height: 250px; line-height: 200px; border-radius: 50%;" src="images/me.jpg"/>
+					<h3> 
+						As what some would call an optimistic or altruistic individual, I believe technology has a lot of ways to improve the world beyond
+					the common use case of adding convenience to everyday life. New avenues of technology have the ability to revolutionize 
+					industries through optimization and multiplied productivity. I am interested in pursuing these kinds of advancements in agriculture, 
+					transportation, finance, social services, and many other core infrastructures. With so much potential, I am always excitedly looking forward 
+					to what the future holds. 
+					</h3>
+				</div>
+
+				<div data-0="display: none;" data-600="display: block;" style="display: flex;">
+				
+					<h3> 
+						I am originially from Las Vegas, NV and moved to Seattle, WA to attend college at Seattle University. I graduated from there with a Bachelor's 
+					Degree in Computer Science with a minor in Mathematics. Shortly after graduation, I started work interning at T-Mobile working in QA doing automated 
+					testing for mobile applications on devices. I still currently work at T-Mobile almost 4 years later now a mid-level software engineer designing 
+					applications that control billions of dollars of spend and the allocation of millions of materials.
+					</h3>
+					<img  style="width: 250px; height: 250px; line-height: 200px; border-radius: 50%;" src="images/pastrypose.PNG"/>
+				</div>
+				
+				<h3>
+					My interests in the field are web/mobile development, machine learning and AI, and microservice development. Outside of work, I enjoy spending 
+					time outdoors, playing music, cooking, video games, and quality time with friends!
+				</h3>
+			</section>
+			<section class="projects-banner" class="projects-banner" id="projects">
+				<h1> Some Side Projects </h1>
+			</section>
+			<section class="contact-banner" id="contact">
+				<h1> Reach Out and Say Hi! </h1>
+				<a target="_blank" href="https://www.linkedin.com/in/anthonyabsher"><img style="width:150px;" src="images/in.png" /></a>
+				<a href="mailto:anthonyabsher@gmail.com"><img  style="width:350px;" src="images/mail.png" /></a>
+			</section>
+		</div>
+	</div>
+	<script type="text/javascript" src="./scripts/skrollr.min.js"></script>
+	<script type="text/javascript"> var s = skrollr.init(); </script>
+</body>
+
+<!-- SCRIPTS -->
+<!-- <script src="scripts/headerScript.js"> </script> -->
+<script src="scripts/classie.js"> </script>
+<script>
+	const sections = [...document.querySelectorAll('section')]
+	const options = {
+	rootMargin: '0px',
+	threshold: 0.25
+	}
+	const callback = (entries) => {
+	entries.forEach((entry) => {
+		if (entry.intersectionRatio >= 0.25) {
+		target.classList.add("is-visible");
+		} else {
+		target.classList.remove("is-visible");
+		}
+	})
+	}
+	const observer = new IntersectionObserver(callback, options)
+
+	sections.forEach((section, index) => {
+	observer.observe(section)
+	})
+</script>
+
+</html>
