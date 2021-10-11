@@ -85,6 +85,26 @@
         .link:hover {
             text-decoration: underline;
         }
+
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* Track */
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        /* Handle */
+        ::-webkit-scrollbar-thumb {
+            background: goldenrod;
+            border-radius: 15px;
+        }
+
+        /* Handle on hover */
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
     </style>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
@@ -95,7 +115,7 @@
     <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by freepik - www.freepik.com</a> -->
 </head>
 <body style="margin: 0px; padding: 0px; overflow: hidden;">
-    <div id="intro" style="background-image: url('./images/pikist.jpg'); height: 100vh; width: 100vw; font-family: Rovery;">
+    <div id="intro" style="background-image: url('./images/pikist.jpg'); height: 100vh; width: 100vw; font-family: Rovery;  background-size: cover;">
         <img style="animation: rotation 2s infinite linear; position: absolute; top: -40vh; left: -25vw; width: 60vw;" src="./images/SeekPng.com_vinyl-records-png_492575.png">
         <div id="header" style="position: absolute; top: 0; right: 30px; display: flex; flex-direction: row; font-family: Rovery; color: antiquewhite; z-index: 1;">
             <div class="link" onclick="scrollIntoZone('about')" style="cursor: pointer; margin: 0px 1vw;"><h1>About</h1></div>
@@ -111,12 +131,12 @@
             <h2 style="font-family: VintageStyle; font-weight: normal; font-size: 4em; margin: 0px; color: goldenrod; ">Creative <span style="font-size: xx-large; color: antiquewhite;">✦</span> Driven <span style="font-size: xx-large; color: antiquewhite;">✦</span> Unique </h2>
         </div>
         <img style="position: absolute; left: 70vw; bottom: 15vh; animation: wave 8s infinite linear" src="images/palm.png" />
-        <img style="position: absolute; left: 0; top: 90vh;" src="./images/cream-wave.svg">
+        <img style="position: absolute; left: 0; top: 95vh; width: 100vw;" src="./images/cream-wave.svg">
         <i class="fa fa-angle-down" onclick="scrollIntoZone('about')" style="position: absolute; top: 80vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
     <div id="about" style="background-image: url('./images/5477582.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <img style="position: absolute; left: 0; top: 100vh; transform: rotate(180deg);" src="./images/cream-wave.svg">
+        <img style="position: absolute; left: 0; top: 100vh; transform: rotate(180deg); width: 100vw;" src="./images/cream-wave.svg">
         <i class="fa fa-angle-up" onclick="scrollIntoZone('intro')" style="position: absolute; top: 100vh; color: #c48cc4; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
         <div style="text-align: left; color:darkslategray; padding: 10vh 10vw;">
             <h1 style="font-size: 4em; margin: 0px; color: darkslategray;">About Me</h1>
@@ -144,44 +164,44 @@
                 </div>
             </div>
         </div>
-        <img style="position: absolute; left: 0; top: 190vh;" src="./images/dblue-wave.svg">
+        <img style="position: absolute; left: 0; top: 194vh; width: 100vw;" src="./images/purple-wave.svg">
         <i class="fa fa-angle-down" onclick="scrollIntoZone('projects')" style="position: absolute; top: 185vh; color: #c48cc4; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
 
     <div id="projects" style="background-image: url('./images/5488082.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <img style="position: absolute; left: 0; top: 200vh; transform: rotate(180deg);" src="./images/purple-wave.svg">
+        <img style="position: absolute; left: 0; top: 201vh; transform: rotate(180deg); width: 100vw;" src="./images/purple-wave.svg">
         <i class="fa fa-angle-up" onclick="scrollIntoZone('about')" style="position: absolute; top: 200vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
         <div style="text-align: left; padding: 25px; padding-top: 15vh; color:darkslategray;">
             <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; font-weight: normal;">My Projects</h1>
-            <h2 style="color: antiquewhite; font-size: 4em; font-weight: normal; margin: 0px;">Sound Off - <span style="font-family: VintageStyle;">2021</span> </h2>
+            <h2 style="color: antiquewhite; font-size: 3em; font-weight: normal; margin: 0px;">Sound Off - <span style="font-family: VintageStyle;">2021</span> </h2>
             <div>
                 <img style="height: 45vh; margin: 10px; margin-right: 40px; float: left;" src="images/soundoffscreen.PNG">
                 <!-- <img style="width: 30vw; " src="images/Animation.gif"/> -->
-                <p style="color: antiquewhite; font-size: 1.5em; margin: 10px; margin-top: 0px; text-align: center;"> My love of music and interest to explore new technology led to the development of this project<span style="font-family: Arial;">.</span> There are two main technologies that drive this app<span style="font-family: Arial;">,</span> Spotify Music API and SocketIO realtime socket communication<span style="font-family: Arial;">.</span> The Spotify API is what is used to authenticate users<span style="font-family: Arial;">,</span> pull their playlist info<span style="font-family: Arial;">,</span> and to play music in the web player<span style="font-family: Arial;">.</span> The Socket IO package gives the app the ability to communicate in realtime with concurrent users<span style="font-family: Arial;">,</span> and this allows for the creation of separate listening rooms with live chat for concurrent users in a room<span style="font-family: Arial;">.</span> This app has only just been created and still has much potential!</p>
+                <p style="color: antiquewhite; font-size: 1.3em; margin: 10px; margin-top: 0px; text-align: center;"> My love of music and interest to explore new technology led to the development of this project<span style="font-family: Arial;">.</span> There are two main technologies that drive this app<span style="font-family: Arial;">,</span> Spotify Music API and SocketIO realtime socket communication<span style="font-family: Arial;">.</span> The Spotify API is what is used to authenticate users<span style="font-family: Arial;">,</span> pull their playlist info<span style="font-family: Arial;">,</span> and to play music in the web player<span style="font-family: Arial;">.</span> The Socket IO package gives the app the ability to communicate in realtime with concurrent users<span style="font-family: Arial;">,</span> and this allows for the creation of separate listening rooms with live chat for concurrent users in a room<span style="font-family: Arial;">.</span> This app has only just been created and still has much potential!</p>
             </div>  
         </div>
-        <img style="position: absolute; left: 0; top: 290vh;" src="./images/dblue-wave.svg">
+        <img style="position: absolute; left: 0; top: 293vh; width: 100vw;" src="./images/dblue-wave.svg">
         <i class="fa fa-angle-down" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 285vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
     <div id="projects2" style="background-image: url('./images/5488082.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <img style="position: absolute; left: 0; top: 300vh; transform: rotate(180deg);" src="./images/dblue-wave.svg">
+        <img style="position: absolute; left: 0; top: 300vh; transform: rotate(180deg); width: 100vw;" src="./images/dblue-wave.svg">
         <i class="fa fa-angle-up" onclick="scrollIntoZone('projects')" style="position: absolute; top: 300vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
         <div style="text-align: left; padding: 25px; padding-top: 15vh; color:darkslategray;">
             <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; font-weight: normal;">My Projects (Continued)</h1>
-            <h2 style="color: antiquewhite; font-size: 4em; font-weight: normal; margin: 0px;">Troves - <span style="font-family: VintageStyle;">2020</span> </h2>
+            <h2 style="color: antiquewhite; font-size: 3em; font-weight: normal; margin: 0px;">Troves - <span style="font-family: VintageStyle;">2020</span> </h2>
             <img style="height: 45vh; float: left; margin-right: 5vw; margin-left: 40px; box-shadow: 0px 0px 60px black;" src="images/troves1.png"/>
             <img style="height: 45vh; float: left; box-shadow: 0px 0px 60px black; margin-right: 40px;" src="images/troves2.png">
-            <p style="color: antiquewhite; font-size: 1.5em; margin: 15px; margin-top: 0px; text-align: center;"> This was a location-based mobile app built with an idea to use crowd-sourced points of interest to create connections between people and their community<span style="font-family: Arial;">.</span> The user could add local points of interest to the public or just to private groups of friends<span style="font-family: Arial;">.</span> Built on a react-native stack<span style="font-family: Arial;">,</span> the app was designed to work cross-platform<span style="font-family: Arial;">.</span> This was my first real venture into mobile development<span style="font-family: Arial;">,</span> and using google API<span style="font-family: Arial;">,</span> react-native map packages<span style="font-family: Arial;">,</span> and other packages to provide a synchronized service between members turned out to be a great challenge and learning experience!</p>
+            <p style="color: antiquewhite; font-size: 1.3em; margin: 15px; margin-top: 0px; text-align: center;"> This was a location-based mobile app built with an idea to use crowd-sourced points of interest to create connections between people and their community<span style="font-family: Arial;">.</span> The user could add local points of interest to the public or just to private groups of friends<span style="font-family: Arial;">.</span> Built on a react-native stack<span style="font-family: Arial;">,</span> the app was designed to work cross-platform<span style="font-family: Arial;">.</span> This was my first real venture into mobile development<span style="font-family: Arial;">,</span> and using google API<span style="font-family: Arial;">,</span> react-native map packages<span style="font-family: Arial;">,</span> and other packages to provide a synchronized service between members turned out to be a great challenge and learning experience!</p>
         </div>
-        <img style="position: absolute; left: 0; top: 390vh;" src="./images/cream-wave.svg">
+        <img style="position: absolute; left: 0; top: 393vh; width: 100vw;" src="./images/cream-wave.svg">
         <i class="fa fa-angle-down" onclick="scrollIntoZone('resume')" style="position: absolute; top: 385vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
     <div id="resume" style="background: antiquewhite; height: 100vh; width: 100vw; font-family: Rovery; background-size: cover; overflow-y: scroll;">
         <!-- <img style="position: absolute; left: 0; top: 400vh; transform: rotate(180deg);" src="./images/burgundy-wave.svg"> -->
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 400vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 400vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 2;"></i>
         <h1 style="font-size: 4em; margin: 0px; color: darkslategray; position: absolute; font-weight: normal; top: 405vh; left: 5vw;">Resume</h1>
     
         <div class="timeline">
@@ -210,8 +230,8 @@
                 </div>
             </div>
         </div>
-        <img style="position: absolute; left: 0; top: 490vh;" src="./images/darkgreen-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('contact')" style="position: absolute; top: 485vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
+        <img style="position: absolute; left: 0; top: 493vh; width: 100vw;" src="./images/darkgreen-wave.svg">
+        <i class="fa fa-angle-down" onclick="scrollIntoZone('contact')" style="position: absolute; top: 485vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 2;"></i>
     </div>
 
     <div id="contact" style="background-image: url('./images/olive-green-paper-texture.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
