@@ -1,326 +1,520 @@
 <!DOCTYPE html>
 <html lang="en">
-    <style>
-        @font-face { font-family: Rovery; src: url('./css/VintageRovery.otf'); }
-        @font-face { font-family: VintageStyle; src: url('./css/VintageStyle.otf'); }
-        @font-face { font-family: VintageKing; src: url('./css/VintageKing.ttf'); }
-        @keyframes rotation {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(359deg);
-            }
+<style>
+    @font-face { font-family: Rovery; src: url('./css/VintageRovery.otf'); }
+    @font-face { font-family: VintageStyle; src: url('./css/VintageStyle.otf'); }
+    @font-face { font-family: VintageKing; src: url('./css/VintageKing.ttf'); }
+    @keyframes rotation {
+        from {
+            transform: rotate(0deg);
         }
-        @keyframes bounce {
-            0%, 100%, 20%, 50%, 80% {
-                -webkit-transform: translateY(0);
-                -ms-transform:     translateY(0);
-                transform:         translateY(0)
-            }
-            40% {
-                -webkit-transform: translateY(-30px);
-                -ms-transform:     translateY(-30px);
-                transform:         translateY(-30px)
-            }
-            60% {
-                -webkit-transform: translateY(-15px);
-                -ms-transform:     translateY(-15px);
-                transform:         translateY(-15px)
-            }
+        to {
+            transform: rotate(359deg);
         }
-
-        @keyframes fadeInAnimation {
-            0% {
-                opacity: 0;
-                transform: translateX(-30px);
-            }
-            100% {
-                opacity: 1;
-            }
+    }
+    @keyframes bounce {
+        0%, 100%, 20%, 50%, 80% {
+            -webkit-transform: translateY(0);
+            -ms-transform:     translateY(0);
+            transform:         translateY(0)
         }
-
-        @keyframes bounce1 {
-            10% {
-                transform: translateY(0px);
-            }
-            20% {
-                transform: translateY(-15px);
-            }
-            30% {
-                transform: translateY(0px);
-            }
+        40% {
+            -webkit-transform: translateY(-30px);
+            -ms-transform:     translateY(-30px);
+            transform:         translateY(-30px)
         }
-
-        @keyframes bounce2 {
-            30% {
-                transform: translateY(0px);
-            }
-            40% {
-                transform: translateY(-15px);
-            }
-            50% {
-                transform: translateY(0px);
-            }
+        60% {
+            -webkit-transform: translateY(-15px);
+            -ms-transform:     translateY(-15px);
+            transform:         translateY(-15px)
         }
+    }
 
-        @keyframes bounce3 {
-            50% {
-                transform: translateY(0px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
-            70% {
-                transform: translateY(0px);
-            }
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+            transform: translateX(-30px);
         }
-
-        @keyframes bounce4 {
-            70% {
-                transform: translateY(0px);
-            }
-            80% {
-                transform: translateY(-15px);
-            }
-            90% {
-                transform: translateY(0px);
-            }
+        100% {
+            opacity: 1;
         }
+    }
 
-        @keyframes wave {
-            0%, 60%, 100% {
-                -webkit-transform: rotate(0);
-                -ms-transform:     rotate(0);
-                transform:         rotate(0);
-                transform: translateX(30px);
-            }
-            30% {
-                -webkit-transform: rotate(8deg);
-                -ms-transform:     rotate(8deg);
-                transform:         rotate(8deg)
-            }
-            90% {
-                -webkit-transform: rotate(4deg);
-                -ms-transform:     rotate(4deg);
-                transform:         rotate(4deg)
-            }
+    @keyframes bounce1 {
+        10% {
+            transform: translateY(0px);
         }
-
-        @keyframes breathe {
-            0%, 50%, 100%{
-                transform: scale(1);
-            }
-            25%, 75% {
-                transform: scale(1.2);
-            }
+        20% {
+            transform: translateY(-15px);
         }
-
-
-
-        #emoji1 {
-            animation: bounce1 3s infinite;
+        30% {
+            transform: translateY(0px);
         }
+    }
 
-        #emoji2 {
-            animation: bounce2 3s infinite;
+    @keyframes bounce2 {
+        30% {
+            transform: translateY(0px);
         }
+        40% {
+            transform: translateY(-15px);
+        }
+        50% {
+            transform: translateY(0px);
+        }
+    }
 
-        #emoji3 {
-            animation: bounce3 3s infinite;
+    @keyframes bounce3 {
+        50% {
+            transform: translateY(0px);
         }
+        60% {
+            transform: translateY(-15px);
+        }
+        70% {
+            transform: translateY(0px);
+        }
+    }
 
-        #emoji4 {
-            animation: bounce4 3s infinite;
+    @keyframes bounce4 {
+        70% {
+            transform: translateY(0px);
         }
+        80% {
+            transform: translateY(-15px);
+        }
+        90% {
+            transform: translateY(0px);
+        }
+    }
 
-        i {
-            -webkit-animation-duration: 1s;
-            animation-duration: 1s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-            -webkit-animation-timing-function: ease-in-out;
-            animation-timing-function: ease-in-out;
-            animation-iteration-count: infinite;
-            -webkit-animation-iteration-count: infinite;
+    @keyframes wave {
+        0%, 60%, 100% {
+            -webkit-transform: rotate(0);
+            -ms-transform:     rotate(0);
+            transform:         rotate(0);
+            transform: translateX(30px);
         }
+        30% {
+            -webkit-transform: rotate(8deg);
+            -ms-transform:     rotate(8deg);
+            transform:         rotate(8deg)
+        }
+        90% {
+            -webkit-transform: rotate(4deg);
+            -ms-transform:     rotate(4deg);
+            transform:         rotate(4deg)
+        }
+    }
 
-        i:hover {
-            cursor: pointer;
-            animation-name: bounce;
-            -moz-animation-name: bounce;
+    @keyframes breathe {
+        0%, 50%, 100%{
+            transform: scale(1);
         }
+        25%, 75% {
+            transform: scale(1.2);
+        }
+    }
 
-        #introContent {
-            animation: fadeInAnimation ease 3s;
-            animation-iteration-count: 1;
-            animation-fill-mode: forwards;
-        }
 
-        .link:hover {
-            text-decoration: underline;
-        }
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+    #emoji1 {
+        animation: bounce1 3s infinite;
+    }
 
-        /* Track */
-        ::-webkit-scrollbar-track {
-            background: transparent;
-        }
+    #emoji2 {
+        animation: bounce2 3s infinite;
+    }
 
-        /* Handle */
-        ::-webkit-scrollbar-thumb {
-            background: goldenrod;
-            border-radius: 15px;
-        }
+    #emoji3 {
+        animation: bounce3 3s infinite;
+    }
 
-        /* Handle on hover */
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
+    #emoji4 {
+        animation: bounce4 3s infinite;
+    }
 
-        #in:hover {
-            animation: breathe ease 4s infinite;
-        }
-    </style>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    i {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+        -webkit-animation-iteration-count: infinite;
+    }
+
+    i:hover {
+        cursor: pointer;
+        animation-name: bounce;
+        -moz-animation-name: bounce;
+    }
+
+    #introContent {
+        animation: fadeInAnimation ease 3s;
+        animation-iteration-count: 1;
+        animation-fill-mode: forwards;
+    }
+
+    .link:hover {
+        text-decoration: underline;
+    }
+
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+
+    /* Track */
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background: goldenrod;
+        border-radius: 15px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: #555;
+    }
+
+    #in:hover {
+        animation: breathe ease 4s infinite;
+    }
+</style>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Absher</title>
-    <link rel="stylesheet" href="css/timeline.css">
+    <link rel="stylesheet" href="new_style.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <!-- <a href='https://www.freepik.com/vectors/abstract'>Abstract vector created by freepik - www.freepik.com</a> -->
 </head>
-<body style="margin: 0px; padding: 0px; overflow: hidden;">
-    <div id="intro" style="background-image: url('./images/pikist.jpg'); height: 100vh; width: 100vw; font-family: Rovery;  background-size: cover;">
-        <img style="animation: rotation 2s infinite linear; position: absolute; top: -40vh; left: -25vw; width: 60vw;" src="./images/SeekPng.com_vinyl-records-png_492575.png">
-        <div id="header" style="position: absolute; top: 0; right: 30px; display: flex; flex-direction: row; font-family: Rovery; color: antiquewhite; z-index: 1;">
-            <div class="link" onclick="scrollIntoZone('about')" style="cursor: pointer; margin: 0px 1vw;"><h1 style="font-size: 2vw;">About</h1></div>
-            <span style="font-size: 2vw; color: goldenrod; margin-block-start: 0.67em;">✦</span>
-            <div class="link" onclick="scrollIntoZone('projects')" style="cursor: pointer; margin: 0px 1vw;"><h1 style="font-size: 2vw;">Projects</h1></div>
-            <span style="font-size: 2vw; color: goldenrod; margin-block-start: 0.67em;">✦</span>
-            <div class="link" onclick="scrollIntoZone('resume')" style="cursor: pointer; margin: 0px 1vw;"><h1 style="font-size: 2vw;">Resume</h1></div>
-            <span style="font-size: 2vw; color: goldenrod; margin-block-start: 0.67em;">✦</span>
-            <div class="link" onclick="scrollIntoZone('contact')" style="cursor: pointer; margin: 0px 1vw;"><h1 style="font-size: 2vw;">Contact</h1></div>
+
+<body class="site-body">
+    <div id="intro" class="body-section" style="background-image: url('./images/pikist.jpg')">
+        <img alt="vinyl record" class="vinyl-record" src="./images/SeekPng.com_vinyl-records-png_492575.png">
+        
+        <div class="header">
+            <div class="link" onclick="scrollIntoZone('about')"><h1>About</h1></div>
+            <span class="divider">✦</span>
+            <div class="link" onclick="scrollIntoZone('resume')"><h1>Resume</h1></div>
+            <span class="divider">✦</span>
+            <div class="link" onclick="scrollIntoZone('projects')"><h1>Projects</h1></div>
+            <span class="divider">✦</span>
+            <div class="link" onclick="scrollIntoZone('contact')"><h1>Contact</h1></div>
         </div>
-        <div id="introContent" style="text-align: center; padding-top: 35vh;">
-            <h1 style="font-size: 7vh; margin: 0px; color: antiquewhite; ">Anthony Absher</h1>
-            <h2 style="font-family: VintageStyle; font-weight: normal; font-size: 5vh; margin: 0px; color: goldenrod; ">Creative <span style="font-size: xx-large; color: antiquewhite;">✦</span> Driven <span style="font-size: xx-large; color: antiquewhite;">✦</span> Unique </h2>
+        
+        <div class="intro-content">
+            <h1>Anthony Absher</h1>
+            <h2>Creative <span>✦</span> Driven <span>✦</span> Unique </h2>
         </div>
-        <img style="position: absolute; left: 70vw; bottom: 15vh; animation: wave 8s infinite linear; width: 45vw;" src="images/palm.png" />
-        <img style="position: absolute; bottom:0; width: 100vw;" src="./images/cream-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('about')" style="position: absolute; top: 80vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
+
+        <img alt="waving palm" class="palm-leaf" src="images/palm.png" />
+        <img alt="wave divider" class="bottom-wave" src="./images/cream-wave.svg">
+        <i class="fa fa-angle-down down-arrow" onclick="scrollIntoZone('about')"></i>
     </div>
 
-    <div id="about" style="background-image: url('./images/download.jfif'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover; overflow: hidden;">
-        <img style="position: absolute; left: 0; top: 100vh; transform: rotate(180deg); width: 100vw;" src="./images/cream-wave.svg">
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('intro')" style="position: absolute; top: 100vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-        <div style="text-align: left; color:antiquewhite; padding: 10vh 5vw;">
-            <h1 style="font-size: 7vh; margin: 0px; color: antiquewhite;  font-weight: normal;">About Me</h1>
-            <div style="flex-direction: row; display: flex; margin-top: 10vh;">
-                <div style="text-align: center; width: 22vw; margin: 0px 20px;">
-                    <h1 id="emoji1" style="font-size: 10vh;">🎰</h1>
-                    <h3 style=" font-weight: normal; font-size: 2vh;">Born and raised in Las Vegas</h3>
+    <div id="about" class="body-section"  style="background-image: url('./images/download.jfif')">
+        <img alt="top wave" class="top-wave" src="./images/cream-wave.svg">
+        <i class="fa fa-angle-up up-arrow" onclick="scrollIntoZone('intro')"></i>
+
+        <div class="about-content">
+            <!-- <h1 class="title">About Me</h1> -->
+            <div class="reveal">
+                <h2>About Me</h2>
+                <p>A creative technologist with a passion for building impactful solutions</p>
+            </div>
+            <div class="about-tiles">
+                <div class="content-square">
+                    <p id="emoji1">🎰</p>
+                    <h3>Born and raised in Las Vegas</h3>
                 </div>
-                <div style="text-align: center; width: 22vw; margin: 0px 20px;">
-                    <h1 id="emoji2" style="font-size: 10vh;">📚</h1>
-                    <h3 style=" font-weight: normal; font-size: 2vh;">Graduated from Seattle University with a Computer Science major and Mathematics minor</h3>
+                <div class="content-square">
+                    <p id="emoji2">📚</p>
+                    <h3>Graduated from Seattle University with a Computer Science major and Mathematics minor</h3>
                 </div>
-                <div style="text-align: center; width: 22vw; margin: 0px 20px;">
-                    <h1 id="emoji3" style="font-size: 10vh;">🎸</h1>
-                    <h3 style=" font-weight: normal; font-size: 2vh;">For fun<span style="font-family: Arial;">,</span> I enjoy playing music<span style="font-family: Arial;">,</span> travelling<span style="font-family: Arial;">,</span> cooking<span style="font-family: Arial;">,</span> and learning new things </h3>
+                <div class="content-square">
+                    <p id="emoji3">🎸</p>
+                    <h3>For fun<span style="font-family: Arial;">,</span> I enjoy playing music<span style="font-family: Arial;">,</span> travelling<span style="font-family: Arial;">,</span> cooking<span style="font-family: Arial;">,</span> and learning new things </h3>
                 </div>
-                <div style="text-align: center; width: 22vw; margin: 0px 20px;">
-                    <h1 id="emoji4" style="font-size: 10vh;">💻</h1>
-                    <h3 style=" font-weight: normal; font-size: 2vh;"> Now I look for ways that I can use technology to better the lives of myself and others </h3>
+                <div class="content-square">
+                    <p id="emoji4">💻</p>
+                    <h3> Now I look for ways that I can use technology to better the lives of myself and others </h3>
                 </div>
             </div>
         </div>
-        <img style="position: absolute; left: 0; bottom:-100vh; width: 100vw;" src="./images/dblue-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('projects')" style="position: absolute; top: 185vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
+
+        <img alt="bottom wave" style="position: absolute; left: 0; bottom:-100vh; width: 100vw;" src="./images/dblue-wave.svg">
+        <i class="fa fa-angle-down" onclick="scrollIntoZone('resume')" style="position: absolute; top: 185vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
-
-    <div id="projects" style="background-image: url('./images/blue-grad.jfif'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <img style="position: absolute; left: 0; top: 200vh; transform: rotate(180deg); width: 100vw;" src="./images/dblue-wave.svg">
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('about')" style="position: absolute; top: 200vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-        <div style="text-align: left; padding: 25px; padding-top: 15vh; color:darkslategray;">
-            <h1 style="font-size: 6vh; margin: 0px; color: antiquewhite; font-weight: normal;">My Projects</h1>
-            <h2 style="color: antiquewhite; font-size: 4vh; font-weight: normal; margin: 0px;"><span style="color: goldenrod;">✦</span>Sound Off - <span style="font-family: VintageStyle;">2021</span> </h2>
-            <div >
-                <img data-aos="zoom-out-right" data-aos-duration="1500" style="height: 45vh; margin: 10px; margin-right: 40px; float: left; box-shadow: 0px 0px 60px black;" src="images/soundoffscreen.PNG">
-                <!-- <img style="width: 30vw; " src="images/Animation.gif"/> -->
-                <p data-aos="fade-right" data-aos-delay="1000" data-aos-easing="ease-in-sine" style="color: antiquewhite; font-size: 1.5vw; margin: 10px; margin-top: 0px; text-align: center;"> My love of music and interest to explore new technology led to the development of this project<span style="font-family: Arial;">.</span> There are two main technologies that drive this app<span style="font-family: Arial;">,</span> Spotify Music API and SocketIO realtime socket communication<span style="font-family: Arial;">.</span> The Spotify API is what is used to authenticate users<span style="font-family: Arial;">,</span> pull their playlist info<span style="font-family: Arial;">,</span> and to play music in the web player<span style="font-family: Arial;">.</span> The Socket IO package gives the app the ability to communicate in realtime with concurrent users<span style="font-family: Arial;">,</span> and this allows for the creation of separate listening rooms with live chat for concurrent users in a room<span style="font-family: Arial;">.</span> This app has only just been created and still has much potential!</p>
-            </div>  
+    <div id="resume" class="body-section" style="background-image: url('./images/blue-grad.jfif'); overflow: scroll">
+        <img alt="top wave" style="position: absolute; left: 0; top: 200vh; transform: rotate(180deg); width: 100vw; z-index: 20" src="./images/dblue-wave.svg">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('about')" style="position: absolute; top: 195vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 21;"></i>
+        
+        <div class="reveal" style="padding: 80px; padding-bottom: 0px; color: whitesmoke;">
+            <h2>My Work History</h2>
         </div>
-        <img style="position: absolute; left: 0; bottom: -200vh; width: 100vw;" src="./images/purple-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 285vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-    </div>
 
-    <div id="projects2" style="background-image: url('./images/purp-grad.jfif'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <img style="position: absolute; left: 0; top: 300vh; transform: rotate(180deg); width: 100vw;" src="./images/purple-wave.svg">
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects')" style="position: absolute; top: 300vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-        <div style="text-align: left; padding: 25px; padding-top: 15vh; color:darkslategray;">
-            <h1 style="font-size: 6vh; margin: 0px; color: darkslategray; font-weight: normal;">My Projects (Continued)</h1>
-            <h2 style="color: darkslategray; font-size: 4vh; font-weight: normal; margin: 0px;"><span style="color: goldenrod;">✦</span>Troves - <span style="font-family: VintageStyle;">2020</span> </h2>
-            <div style="margin-top: 40px;">
-                <img data-aos="zoom-out-right" data-aos-duration="500" style="height: 45vh; float: left; margin-right: 5vw; margin-left: 40px; box-shadow: 0px 0px 60px black;" src="images/troves1.png"/>
-                <img data-aos="zoom-out-right" data-aos-duration="1000" style="height: 45vh; float: left; box-shadow: 0px 0px 60px black; margin-right: 40px;" src="images/troves2.png">
-                <p data-aos="fade-right" data-aos-delay="1000" style="color: darkslategray;  font-size: 1.5vw; margin: 15px; margin-top: 0px; text-align: center;"> This was a location-based mobile app built with an idea to use crowd-sourced points of interest to create connections between people and their community<span style="font-family: Arial;">.</span> The user could add local points of interest to the public or just to private groups of friends<span style="font-family: Arial;">.</span> Built on a react-native stack<span style="font-family: Arial;">,</span> the app was designed to work cross-platform<span style="font-family: Arial;">.</span> This was my first real venture into mobile development<span style="font-family: Arial;">,</span> and using google API<span style="font-family: Arial;">,</span> react-native map packages<span style="font-family: Arial;">,</span> and other packages to provide a synchronized service between members turned out to be a great challenge and learning experience!</p>    
-            </div>
-        </div>
-        <img style="position: absolute; left: 0; bottom: -300vh; width: 100vw;" src="./images/cream-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('resume')" style="position: absolute; top: 385vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-    </div>
+        <div style="max-width: 85vw; margin: 40px auto;">        
+            <div class="timeline">
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <h3>Senior Software Engineer, Full Stack</h3>
+                            </div>
+                            <span class="badge">2022-Present</span>
+                        </div>
+                        <p class="company">Celonis AI</p>
+                        <ul class="timeline-bullets">
+                        <li>Leading front-end development for multiple applications and products from design to delivery, encompassing requirements gathering, technical design, design review, cross-functional collaboration, implementation, and post-launch maintenance.</li> 
+                        <li>Designed and delivered an application that reduced customer setup and implementation time for a custom AI deduplication algorithm from multiple days to less than one minute. </li>
+                        <li>Spearheaded front-end development for an application enabling large-scale image processing, a novel capability on the platform. This application ingests documents and images, processes them via AI analysis to extract features, and converts them into structured data to be used within our platform.</li>
+                        <li>Collaborating cross-functionally with teams spanning global timezones to deliver project requirements effectively. </li>
+                        </ul>
+                    </div>
+                </div>
 
-    <div id="resume" style="background: antiquewhite; height: 100vh; width: 100vw; font-family: Rovery; background-size: cover; overflow-y: scroll;">
-        <!-- <img style="position: absolute; left: 0; top: 400vh; transform: rotate(180deg);" src="./images/burgundy-wave.svg"> -->
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects2')" style="position: absolute; top: 400vh; color: goldenrod; font-size: 140px; left: calc(50vw - 50px); z-index: 2;"></i>
-        <h1 style="font-size: 4em; margin: 0px; color: darkslategray; position: absolute; font-weight: normal; top: 405vh; left: 5vw;">Resume</h1>
-    
-        <div class="timeline">
-            <div class="container left">
-                <div class="content">
-                    <h2>2017-Present</h2>
-                    <h3>Senior Software Engineer - T-Mobile</h3>
-                    <p>▪ Leading development on multiple applications, APIs, and other systems that are business critical for managing T-Mobile's supply chain and financial allocations for procurement.</p>
-                    <p>▪ Utilize AWS and Azure cloud services such as S3, Lambda, Databricks, and Azure Data Factory to develop scalable microservices that have, among other benefits, cut application load times in half.</p>
-                    <p>▪ Manage DevOps for the team. This includes implementing application and database monitors to validate performance KPIs as well as administrating CI/CD pipelines for deployments.</p>  
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <h3>Senior Software Engineer, Full Stack</h3>
+                            </div>
+                            <span class="badge">2017-2022</span>
+                        </div>
+                        <p class="company">T-Mobile</p>
+                        <ul class="timeline-bullets">
+                        <li>Led the design and development of applications and APIs for optimizing business processes, enabling  data-driven decisions, and managing material allocation and procurement related to construction and maintenance of cell towers </li> 
+                        <li>Developed scalable microservices using AWS and Azure cloud services (S3, Lambda, Databricks, Azure Data Factory, Kubernetes) to enhance application performance and resilience. </li>
+                        <li>Implemented DevOps best practices, including logging, monitoring, and deployment pipelines, to ensure consistent application performance and consistency. </li>
+                        <li>Managed and mentored team members, fostering professional development, facilitating cross-team collaboration, and overseeing project development. </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <h3>Full Stack Web Developer</h3>
+                            </div>
+                            <span class="badge">2016-2017</span>
+                        </div>
+                        <p class="company">Jubilee Reach</p>
+                        <ul class="timeline-bullets">
+                            <li>Collaborated with a small team of other students to design and build an online store from the ground up for a local nonprofit. The intent of the store was to grow their customer base and promote sales of large and excess inventory.</li>
+                            <li>Assumed the role of primary architect to design the database structures and server calls that would control data.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item reveal">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-title">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                                    <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                                </svg>
+                                <h3>Computer Science Tutor</h3>
+                            </div>
+                            <span class="badge">2016-2017</span>
+                        </div>
+                        <p class="company">Seattle University</p>
+                        <ul class="timeline-bullets">
+                            <li>Taught and reinforced fundamental CS concepts for students at my university.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-            <div class="container right">
-              <div class="content">
-                <h2>2016 - 2017</h2>
-                <h3>Full Stack Web Developer - Jubilee Reach</h3>
-                <p>▪ Collaborated with a small team of other students to design and build an online store from the ground up for a local nonprofit. The intent of the store was to grow their customer base and promote sales of large and excess inventory.  </p>
-                <p>▪ Assumed the role of primary architect to design the database structures and server calls that would control data.</p>  
-              </div>
-            </div>
-            <div class="container left">
-                <div class="content">
-                  <h2>2016-2017</h2>
-                  <h3>Computer Science Tutor - Seattle University</h3>
-                  <p>▪ Taught and reinforced fundamental CS concepts for students at my university.</p>  
-                </div>
-            </div>
         </div>
-        <img style="position: absolute; left: 0; bottom: -400vh; width: 100vw;" src="./images/darkgreen-wave.svg">
-        <i class="fa fa-angle-down" onclick="scrollIntoZone('contact')" style="position: absolute; top: 485vh; color: goldenrod; font-size: 140px; left: calc(50vw - 50px); z-index: 2;"></i>
+
+        <img alt="bottom wave" style="position: absolute; left: 0; bottom: -200vh; width: 100vw;" src="./images/cream-wave.svg">
+        <i class="fa fa-angle-down" onclick="scrollIntoZone('projects')" style="position: absolute; top: 285vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
     </div>
 
-    <div id="contact" style="background-image: url('./images/olive-green-paper-texture.jpg'); height: 100vh; width: 100vw; font-family: Rovery; background-size: cover;">
-        <!-- <img style="position: absolute; left: 0; top: 500vh; transform: rotate(180deg);" src="./images/purple-wave.svg"> -->
-        <i class="fa fa-angle-up" onclick="scrollIntoZone('resume')" style="position: absolute; top: 500vh; color: goldenrod; font-size: 140px; left: calc(50vw - 45px); z-index: 1;"></i>
-        <div style="text-align: center; padding-top: 15vh; color:darkslategray;">
-            <h1 style="font-size: 4em; margin: 0px; color: antiquewhite; transform: translate(-20vw, -5vh); font-weight: normal;">Contact Me!</h1>
-            <a target="_blank" href="https://www.linkedin.com/in/anthonyabsher"><img id="in" style="width: 10vw; background-color: whitesmoke; border-radius: 20px; margin-top: 10vh;" src="images/linkedin.svg"></a>
+    <div id="projects" class="body-section" style="background: antiquewhite;">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('resume')" style="position: absolute; top: 295vh; color: goldenrod; font-size: 140px; left: calc(95vw - 45px); z-index: 21;"></i>
+
+        <div class="reveal" style="font-family: var(--font-mono); padding: 25px; padding-bottom: 10px; margin-bottom: 0">
+            <h2>My Projects</h2>
+            <p>Building innovative solutions at the intersection of creativity and technology</p>
+        </div>
+
+        <div class="projects-container">
+
+                <!-- Seelo -->
+                 <div class="project-card reveal">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Seelo</h3>
+                            <span class="badge">2025</span>
+                        </div>
+                        <p class="project-description">
+                           A map based mobile application built using Dart language on a Flutter framework. Designed to encourage travel and empower users to see a destination as if guided by locals, the app provides user generated content and experiences. Used Supabase, Google Maps API, Twilio API, and Viator API to build the functionality of the app.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">Dart</span>
+                            <span class="tech-badge">Flutter</span>
+                            <span class="tech-badge">Maps API</span>
+                            <span class="tech-badge">Supabase</span>
+                            <span class="tech-badge">Twilio API</span>
+                        </div>
+                        <div class="project-buttons">
+                        </div>
+                    </div>
+                    <div class="project-images" style="margin-left: auto;">
+                        <img src="images/seelo1.png" alt="Troves mobile app map view" style="max-width: 200px; max-height: 450px;">
+                        <img src="images/seelo2.png" alt="Troves location details" style="max-width: 200px; max-height: 450px;">
+                    </div>
+                </div>
+
+                <!-- Sound Off Project -->
+                <div class="project-card reveal">
+                    <div class="project-image">
+                        <img src="images/soundoffscreen.png" alt="Sound Off application interface">
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Sound Off</h3>
+                            <span class="badge">2021</span>
+                        </div>
+                        <p class="project-description">
+                            My love of music and interest to explore new technology led to the development of this project. There are two main technologies that drive this app, Spotify Music API and Socket.IO realtime socket communication. The Spotify API is what is used to authenticate users, pull their playlist info, and to play music in the web player. The Socket.IO package gives the app the ability to communicate in realtime with concurrent users, and this allows for the creation of separate listening rooms with live chat for concurrent users in a room.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React</span>
+                            <span class="tech-badge">Node.js</span>
+                            <span class="tech-badge">Spotify API</span>
+                            <span class="tech-badge">Socket.IO</span>
+                            <span class="tech-badge">Express</span>
+                        </div>
+                        <div class="project-buttons">
+                            <a href="https://vinyl-lounge.replit.app/" target="_blank">
+                            <button class="btn btn-primary btn-sm">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                                    <polyline points="15 3 21 3 21 9"></polyline>
+                                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                                </svg>
+                                View Demo
+                            </button>
+                            </a>
+                            <button class="btn btn-outline btn-sm">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                </svg>
+                                Source Code
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Troves Project -->
+                <div class="project-card project-reverse reveal">
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Troves</h3>
+                            <span class="badge">2020</span>
+                        </div>
+                        <p class="project-description">
+                            This was a location-based mobile app built with an idea to use crowd-sourced points of interest to create connections between people and their community. The user could add local points of interest to the public or just to private groups of friends. Built on a React Native stack, the app was designed to work cross-platform. This was my first real venture into mobile development, and using Google API, React Native map packages, and other packages to provide a synchronized service between members turned out to be a great challenge and learning experience!
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-badge">React Native</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Google Maps API</span>
+                            <span class="tech-badge">iOS</span>
+                            <span class="tech-badge">Android</span>
+                        </div>
+                    </div>
+                    <div class="project-images">
+                        <img src="images/troves1.png" alt="Troves mobile app map view" style="max-width: 250px">
+                        <img src="images/troves2.png" alt="Troves location details" style="max-width: 250px">
+                    </div>
+                </div>
+            </div>
+
+            <i class="fa fa-angle-down" onclick="scrollIntoZone('contact')" style="position: absolute; top: 385vh; color: goldenrod; font-size: 140px; left: calc(95vw - 45px); z-index: 1;"></i>
+    </div>
+
+    <div id="contact" class="body-section" style="background-image: url('./images/olive-green-paper-texture.jpg');">
+        <i class="fa fa-angle-up" onclick="scrollIntoZone('projects')" style="position: absolute; top: 395vh; color: goldenrod; font-size: 140px; left: calc(95vw - 45px); z-index: 21;"></i>
+
+        <div style="padding: 50px;">
+            <div class="section-header reveal">
+                <h2 class="section-title" style="color: whitesmoke">Get In Touch</h2>
+                <p class="section-subtitle" style="color: #ccc2ff">Let's connect and discuss how we can work together</p>
+            </div>
+
+            <div class="contact-info">
+                    <div class="contact-card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="https://www.linkedin.com/in/anthonyabsher" target="_blank" rel="noopener noreferrer">/in/anthonyabsher</a>
+                    </div>
+
+                    <div class="contact-card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p>anthonyabsher@gmail.com</p>
+                    </div>
+
+                    <div class="contact-card reveal">
+                        <div class="card-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Location</h3>
+                        <p>San Francisco Bay Area</p>
+                    </div>
+                </div>
+
+
         </div>
     </div>
+
 </body>
+
+
 <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+
 <script>
     function scrollIntoZone(zone) {
         var element = document.getElementById(zone);
